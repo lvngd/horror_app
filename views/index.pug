@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1= title
+
+	div#film-list
+		each film in films
+			div= film.title
+			button.addToWatchList(class=film.title) To Watch
+			button.addWatchedList(class=film.title) Watched
+
+	
